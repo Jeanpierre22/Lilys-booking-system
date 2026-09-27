@@ -1,4 +1,3 @@
-
 const form = document.querySelector("form");
 
 form.addEventListener("submit", function(event) {
@@ -10,11 +9,11 @@ form.addEventListener("submit", function(event) {
     const date = document.getElementById("date").value;
     const time = document.getElementById("time").value;
 
-    console.log("Name:", name);
-    console.log("Phone:", phone);
-    console.log("Service:", service);
-    console.log("Date:", date);
-    console.log("Time:", time);
+    localStorage.setItem("name", name);
+    localStorage.setItem("phone", phone);
+    localStorage.setItem("service", service);
+    localStorage.setItem("date", date);
+    localStorage.setItem("time", time);
 
     window.location.href = "confirmation.html";
 });
