@@ -15,14 +15,45 @@
     </header>
 
     <main>
+
         <h2>Thank you for booking with us!</h2>
 
-        <p>Your appointment has been successfully booked.</p>
+        <p>Your appointment details:</p>
+
+        <p><strong>Name:</strong> <span id="customerName"></span></p>
+
+        <p><strong>Phone:</strong> <span id="customerPhone"></span></p>
+
+        <p><strong>Service:</strong> <span id="customerService"></span></p>
+
+        <p><strong>Date:</strong> <span id="customerDate"></span></p>
+
+        <p><strong>Time:</strong> <span id="customerTime"></span></p>
 
         <a href="index.html">
             <button>Return Home</button>
         </a>
+
     </main>
+
+    <script>
+
+        document.getElementById("customerName").textContent =
+            localStorage.getItem("name");
+
+        document.getElementById("customerPhone").textContent =
+            localStorage.getItem("phone");
+
+        document.getElementById("customerService").textContent =
+            localStorage.getItem("service");
+
+        document.getElementById("customerDate").textContent =
+            localStorage.getItem("date");
+
+        document.getElementById("customerTime").textContent =
+            localStorage.getItem("time");
+
+    </script>
 
 </body>
 </html>
