@@ -20,10 +20,6 @@
 
         <p>Your appointment details:</p>
 
-        <p><strong>Name:</strong> <span id="customerName"></span></p>
-
-        <p><strong>Phone:</strong> <span id="customerPhone"></span></p>
-
         <p><strong>Service:</strong> <span id="customerService"></span></p>
 
         <p><strong>Date:</strong> <span id="customerDate"></span></p>
@@ -38,14 +34,18 @@
 
     <script>
 
-        document.getElementById("customerName").textContent =
-            localStorage.getItem("name");
+        const service = localStorage.getItem("service");
 
-        document.getElementById("customerPhone").textContent =
-            localStorage.getItem("phone");
+        const serviceNames = {
+            manicure: "Manicure",
+            pedicure: "Pedicure",
+            gel: "Gel",
+            acrylic: "Acrylic",
+            dip: "Dip Powder"
+        };
 
         document.getElementById("customerService").textContent =
-            localStorage.getItem("service");
+            serviceNames[service] || service;
 
         document.getElementById("customerDate").textContent =
             localStorage.getItem("date");
